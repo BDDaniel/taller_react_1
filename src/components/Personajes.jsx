@@ -36,7 +36,23 @@ const Personajes = () => {
     }
 
     return (
-        <div>personajes</div>
+        <div class="container text-center bg-primary bg-gradient">
+            <div class="row align-items-start">
+                <div class="col mb-3 mt-3">
+                    <h1>PERSONAJES DE RICK AND MORTY</h1>
+                </div>
+            </div>
+            <div class="row align-items-start">
+                <div class="col text-start">
+                    <button type="button" class="btn btn-primary m-2" onClick={obtenerPersonajes}>Traer Personajes</button>
+                    <button type="button" class="btn btn-primary m-2" onClick={limpiar}>Limpiar</button>
+                </div>
+                <div class="col text-end">
+                    <button type="button" class="btn btn-primary m-2" onClick={anterior}>Anterior</button>
+                    <button type="button" class="btn btn-primary m-2" onClick={siguiente}>Siguiente</button>
+                </div>
+            </div>
+        </div>
     )
 }
 
