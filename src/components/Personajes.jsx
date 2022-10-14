@@ -58,6 +58,31 @@ const Personajes = () => {
                 <div class="row">
                     {
                         personajes.map(({ id, name, image, gender, species, status }) => {
+                            if (gender === "Male") {
+                                gender = "Masculino"
+                            } else if (gender === "Female") {
+                                gender = "Femenino"
+                            } else if (gender === "unknown") {
+                                gender = "Desconocido"
+                            }
+                            if (species === "Human") {
+                                species = "Humano"
+                            } else if (species === "unknown") {
+                                species = "Desconocido"
+                            } else if (species === "Disease") {
+                                species = "Enfermedad"
+                            } else if (species === "Humanoid") {
+                                species = "Humanoide"
+                            } else if (species === "Mythological Creature") {
+                                species = "Criatura Mitologica"
+                            }
+                            if (status === "Alive") {
+                                status = "Vivo"
+                            } else if (status === "Dead") {
+                                status = "Muerto"
+                            } else if (status === "unknown") {
+                                status = "Desconocido"
+                            }
                             return (
                                 <div class="col">
                                     <div class="card border border-primary m-2 mt-3" style={{ width: "18rem" }} key={id}>
